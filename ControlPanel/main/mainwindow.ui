@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ControlPanelUI</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1920</width>
+     <height>1080</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1920</width>
+     <height>1080</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(243, 243, 243);</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="minimumSize">
+       <size>
+        <width>1920</width>
+        <height>1080</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: none;</string>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="runscreen">
+       <property name="minimumSize">
+        <size>
+         <width>1920</width>
+         <height>1080</height>
+        </size>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="rs_main_frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
+          </property>
+          <widget class="QLCDNumber" name="extruder_lcd">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>75</y>
+             <width>580</width>
+             <height>205</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 97, 81);
+border-radius: 10px;</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="run_btn">
+           <property name="geometry">
+            <rect>
+             <x>780</x>
+             <y>930</y>
+             <width>320</width>
+             <height>120</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>54</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(38, 162, 105);
+border-radius: 30px;</string>
+           </property>
+           <property name="text">
+            <string>START</string>
+           </property>
+          </widget>
+          <widget class="QLCDNumber" name="caterpillar_lcd">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>405</y>
+             <width>580</width>
+             <height>205</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 97, 81);
+border-radius: 10px;</string>
+           </property>
+          </widget>
+          <widget class="QLCDNumber" name="stepper_lcd">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>740</y>
+             <width>580</width>
+             <height>205</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(246, 97, 81);
+border-radius: 10px;</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>0</y>
+             <width>580</width>
+             <height>70</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>32</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Extruder (RPM)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>330</y>
+             <width>580</width>
+             <height>70</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>32</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Caterpillar (RPM)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>670</y>
+             <width>580</width>
+             <height>70</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>32</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Stepper (%)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="geometry">
+            <rect>
+             <x>1160</x>
+             <y>70</y>
+             <width>720</width>
+             <height>870</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::NoFocus</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(39, 55, 77);
+border-radius: 10px;</string>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <widget class="QGroupBox" name="speeds_grpbox">
+            <property name="geometry">
+             <rect>
+              <x>5</x>
+              <y>60</y>
+              <width>350</width>
+              <height>771</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>36</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Speed</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <widget class="QRadioButton" name="speed1_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>Flank</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="speed2_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>220</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>Full</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="speed3_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>360</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>Medium</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="speed4_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>500</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>Slow</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="speed5_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>640</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>Load</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="products_grpbox">
+            <property name="geometry">
+             <rect>
+              <x>370</x>
+              <y>60</y>
+              <width>350</width>
+              <height>771</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>36</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Product</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <widget class="QRadioButton" name="product1_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>80</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>1.25 inch</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="product2_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>220</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>13/16 mm</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="product3_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>360</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>2 inch</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="product4_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>500</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>3 inch</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="product5_rbtn">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>640</y>
+               <width>320</width>
+               <height>100</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>32</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QRadioButton::checked {
+	background-color : rgb(63, 73, 127);   
+}
+
+QRadioButton::indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: red;
+    border: 5px solid white;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: black;
+    border: 5px solid white;
+}</string>
+             </property>
+             <property name="text">
+              <string>5 inch</string>
+             </property>
+            </widget>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="extruder_up_btn">
+           <property name="geometry">
+            <rect>
+             <x>620</x>
+             <y>60</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/up.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="extruder_down_btn">
+           <property name="geometry">
+            <rect>
+             <x>620</x>
+             <y>190</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/down.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="caterpillar_up_btn">
+           <property name="geometry">
+            <rect>
+             <x>620</x>
+             <y>390</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/up.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="caterpillar_down_btn">
+           <property name="geometry">
+            <rect>
+             <x>620</x>
+             <y>520</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/down.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="stepper_down_btn">
+           <property name="geometry">
+            <rect>
+             <x>620</x>
+             <y>860</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/down.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="stepper_up_btn">
+           <property name="geometry">
+            <rect>
+             <x>620</x>
+             <y>720</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/up.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="settings_btn">
+           <property name="geometry">
+            <rect>
+             <x>1760</x>
+             <y>950</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/gear.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="erpm_volt">
+           <property name="geometry">
+            <rect>
+             <x>25</x>
+             <y>80</y>
+             <width>100</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(246, 97, 81);
+border: 3px solid white;
+border-radius: 7px;</string>
+           </property>
+           <property name="text">
+            <string>00.00V</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="crpm_volt">
+           <property name="geometry">
+            <rect>
+             <x>25</x>
+             <y>410</y>
+             <width>100</width>
+             <height>40</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>18</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(246, 97, 81);
+border: 3px solid white;
+border-radius: 7px;</string>
+           </property>
+           <property name="text">
+            <string>00.00V</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="settingsscreen">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="ss_main_frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="ss_header_lbl">
+           <property name="geometry">
+            <rect>
+             <x>760</x>
+             <y>-20</y>
+             <width>400</width>
+             <height>120</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>54</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Settings</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ss_back_btn">
+           <property name="geometry">
+            <rect>
+             <x>1760</x>
+             <y>950</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/back.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="ss_products_cbox">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>149</y>
+             <width>700</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>38</pointsize>
+            </font>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox {
+	color: #d3dae3;
+	background-color: #222b2e;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+}
+QComboBox::down-arrow {
+    image: url(:/icons/down.svg); 
+}
+QComboBox::drop-down {
+    width: 90px;
+}
+</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>1.25 inch</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>13/16 mm</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>2 inch</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="ss_products_lbl">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>100</y>
+             <width>800</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>32</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string>Products</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ss_maxerpm_lbl">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>291</y>
+             <width>450</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>30</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string>Extruder(rpm)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ss_crpmfactor_lbl">
+           <property name="geometry">
+            <rect>
+             <x>710</x>
+             <y>291</y>
+             <width>450</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>30</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string>Caterpillar(rpm)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ss_colorfactor_lbl">
+           <property name="geometry">
+            <rect>
+             <x>1160</x>
+             <y>291</y>
+             <width>450</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>30</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string>Color (%)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="ss_maxerpm_ledit">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>340</y>
+             <width>450</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+	background-color: #222b2e;
+	color: #d3dae3;
+}</string>
+           </property>
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="ss_crpmfactor_ledit">
+           <property name="geometry">
+            <rect>
+             <x>710</x>
+             <y>340</y>
+             <width>450</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+	background-color: #222b2e;
+	color: #d3dae3;
+}</string>
+           </property>
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="ss_colorfactor_ledit">
+           <property name="geometry">
+            <rect>
+             <x>1160</x>
+             <y>340</y>
+             <width>450</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+	background-color: #222b2e;
+	color: #d3dae3;
+}</string>
+           </property>
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ss_product_edit_btn">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>149</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/edit.svg);
+border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="ss_speeds_cbox">
+           <property name="geometry">
+            <rect>
+             <x>1055</x>
+             <y>149</y>
+             <width>700</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>38</pointsize>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::WheelFocus</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox {
+	color: #d3dae3;
+	background-color: #222b2e;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+}
+QComboBox::down-arrow {
+    image: url(:/icons/down.svg); 
+}
+QComboBox::drop-down {
+    width: 90px;
+}
+</string>
+           </property>
+           <property name="frame">
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>Flank</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Full</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Medium</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Slow</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Load</string>
+            </property>
+           </item>
+          </widget>
+          <widget class="QLabel" name="ss_speeds_lbl">
+           <property name="geometry">
+            <rect>
+             <x>955</x>
+             <y>100</y>
+             <width>800</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>32</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string>Speeds</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ss_speed_edit_btn">
+           <property name="geometry">
+            <rect>
+             <x>955</x>
+             <y>149</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/edit.svg);
+border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ss_params_editsave_btn">
+           <property name="geometry">
+            <rect>
+             <x>1609</x>
+             <y>291</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/edit.svg);
+border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ss_factor_edit_btn">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>291</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/gear.svg);
+padding: 5px 5px 5px 5px;
+border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="inputtextscreen">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QFrame" name="ins_main_frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="ins_input_text_ledit">
+           <property name="geometry">
+            <rect>
+             <x>610</x>
+             <y>250</y>
+             <width>700</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>38</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+	background-color: #222b2e;
+	color: #d3dae3;
+}</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ins_back_btn">
+           <property name="geometry">
+            <rect>
+             <x>1760</x>
+             <y>950</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/back.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ins_item_name_lbl">
+           <property name="geometry">
+            <rect>
+             <x>760</x>
+             <y>80</y>
+             <width>400</width>
+             <height>120</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>---</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="ins_input_save_btn">
+           <property name="geometry">
+            <rect>
+             <x>1350</x>
+             <y>250</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/save.svg);
+border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="factorseditscreen">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QFrame" name="fes_main_frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="fes_analogfactor_lbl">
+           <property name="geometry">
+            <rect>
+             <x>435</x>
+             <y>100</y>
+             <width>900</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>30</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string>ERPM/CRPM Factor (RPMs per Volt)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fes_header_lbl">
+           <property name="geometry">
+            <rect>
+             <x>760</x>
+             <y>-20</y>
+             <width>400</width>
+             <height>120</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>54</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Factors</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="fes_analogfactor_editsave_btn">
+           <property name="geometry">
+            <rect>
+             <x>1335</x>
+             <y>100</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/edit.svg);
+border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="fes_back_btn">
+           <property name="geometry">
+            <rect>
+             <x>1760</x>
+             <y>950</y>
+             <width>100</width>
+             <height>100</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/back.svg);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="fes_analogfactor_edit">
+           <property name="geometry">
+            <rect>
+             <x>435</x>
+             <y>149</y>
+             <width>900</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+	background-color: #222b2e;
+	color: #d3dae3;
+}</string>
+           </property>
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+           <property name="text">
+            <string>150</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="fes_colorfactor_editsave_btn">
+           <property name="geometry">
+            <rect>
+             <x>1330</x>
+             <y>290</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/icons/edit.svg);
+border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="fes_colorfactor_edit">
+           <property name="geometry">
+            <rect>
+             <x>430</x>
+             <y>339</y>
+             <width>900</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>36</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #4fa08b;
+	background-color: #222b2e;
+	color: #d3dae3;
+}</string>
+           </property>
+           <property name="inputMethodHints">
+            <set>Qt::ImhDigitsOnly</set>
+           </property>
+           <property name="text">
+            <string>10</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+          <widget class="QLabel" name="fes_colorfactor_lbl">
+           <property name="geometry">
+            <rect>
+             <x>430</x>
+             <y>290</y>
+             <width>900</width>
+             <height>50</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>30</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #4fa08b;</string>
+           </property>
+           <property name="text">
+            <string>Stepper/Color Factor (Pulses per Step)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
